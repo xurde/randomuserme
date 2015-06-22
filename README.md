@@ -3,7 +3,7 @@
 
 # Randomuserme
 
-Ruby client for randomuser.me
+Ruby client for [randomuser.me](http://randomuser.me) API
 
 ## Installation
 
