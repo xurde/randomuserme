@@ -20,7 +20,7 @@ module RandomUserMe
     def self.get_seeded_user(seed)
       response = get("/?seed=#{seed}")
       return false if !response.parsed_response
-      self.response_map(response)
+      response_map(response)
     end
 
     private
