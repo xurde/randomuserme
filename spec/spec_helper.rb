@@ -1,10 +1,8 @@
 require 'rubygems'
 require 'bundler/setup'
-require 'simplecov'
-require 'simplecov-rcov'
+require 'coveralls'
 
-SimpleCov.formatter = SimpleCov::Formatter::HTMLFormatter
-SimpleCov.start
+Coveralls.wear!
 
 require 'random_user_me'
 
