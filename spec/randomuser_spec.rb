@@ -3,17 +3,31 @@ require 'spec_helper'
 describe RandomUserMe do
 
   describe ".get_random_user" do
-    it "Fetches a new random valid user" do
+    context "fetches a user" do
       user = RandomUserMe::Client.get_random_user
-      expect(user).to     be_valid
+      
+      it "is a valid user" do
+        expect(user).to   be_valid
+      end
+
+      it "is a valid user" do
+        expect(user).to   be_a(RandomUser)
+      end
     end
   end
 
   describe ".get_seeded_user" do
-    it "Fetches a new seeded random valid user" do
+    context "Fetches a seeded user" do
       user = RandomUserMe::Client.get_seeded_user(rand(10000))
-      expect(user).to     be_valid
+
+      it "is a valid user" do
+        expect(user).to   be_valid
+      end
+
+      it "is a valid user" do
+        expect(user).to   be_a(RandomUser)
+      end
     end
   end
-  
+
 end

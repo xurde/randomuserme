@@ -1,8 +1,26 @@
+require 'attrio'
+
 class RandomUser
 
-  attr_accessor :name, :gender, :location, :username, :password, :email, :salt, :md5, :sha1, :sha256, :registered, :dob, :phone, :cell, :DNI, :nationality, :picture
+  include Attrio
 
-  def new
+  define_attributes do
+    attr :email, String
+    attr :name, Hash
+    attr :username, String
+    attr :password, String
+    attr :salt, String
+    attr :md5, String
+    attr :sha1, String
+    attr :sha256, String
+    attr :gender, Integer
+    attr :registered, DateTime
+    attr :dob, Date
+    attr :phone, String
+    attr :cell, String
+    attr :nationality, String
+    attr :location, Hash
+    attr :picture, Hash
   end
 
   def valid?
@@ -28,6 +46,7 @@ class RandomUser
     user.phone =        hash['phone']
     user.cell =         hash['cell']
     user.nationality =  hash['nationality']
+    user.location =     hash['location']
     user.registered =   Time.at(hash['registered'].to_i) if hash['registered']
     user.picture =      hash['picture']
     return user if user.valid?
