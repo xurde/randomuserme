@@ -13,7 +13,7 @@ class RandomUser
     attr :md5, String
     attr :sha1, String
     attr :sha256, String
-    attr :gender, Integer
+    attr :gender, String
     attr :registered, DateTime
     attr :dob, Date
     attr :phone, String
