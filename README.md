@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/xurde/randomuserme.svg?branch=master)](https://travis-ci.org/xurde/randomuserme)
+[![Gem Version](https://badge.fury.io/rb/randomuserme.svg)](http://badge.fury.io/rb/randomuserme)
+
 # Randomuserme
 
 Ruby client for randomuser.me
