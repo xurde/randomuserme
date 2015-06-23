@@ -21,6 +21,8 @@ Or install it yourself as:
 
 ## Usage
 
+Do `require 'random_user_me'` wherever you need to use the gem.
+
 `RandomUserMe::Client.get_random_user`
 
 `RandomUserMe::Client.get_seeded_user(seed)`
