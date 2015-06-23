@@ -49,6 +49,15 @@ Both class methods return a `RandomUser` object like this:
               }>
 ```
 
+`RandomUser` instances include formatted attributes methods like:
+
+* first_name
+* last_name
+* full_name
+* formal_name
+* full_formal_name
+* full_location
+
 ## Contributing
 
 1. Fork it
