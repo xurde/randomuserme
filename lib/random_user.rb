@@ -24,11 +24,31 @@ class RandomUser
   end
 
   def valid?
-    self.email
+    !email.nil? && !name.empty?
   end
 
   def first_name
-    name[""]
+    name["first"].capitalize if name["first"]
+  end
+
+  def last_name
+    name["last"].capitalize if name["last"]
+  end
+
+  def full_name
+    "#{first_name} #{last_name}"
+  end
+
+  def formal_name
+    "#{name["title"]}. #{last_name}"
+  end
+
+  def full_formal_name
+    "#{name["title"]}. #{last_name}, #{first_name}"
+  end
+
+  def full_location
+    "#{location["street"]}, #{location["city"]} #{location["postcode"]}, #{location["state"]}"
   end
 
   def self.create_from_hash(hash)
